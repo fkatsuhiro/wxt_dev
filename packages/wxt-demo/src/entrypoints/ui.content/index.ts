@@ -15,7 +15,7 @@ export default defineContentScript({
       name: 'demo-ui',
       position: 'inline',
       append: 'before',
-      anchor: 'div',
+      anchor: 'p',
       onMount: (container) => {
         const app = document.createElement('div');
         app.classList.add('m-4', 'text-red-500');

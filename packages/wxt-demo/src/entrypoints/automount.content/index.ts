@@ -9,7 +9,7 @@ export default defineContentScript({
     const dynamicUI = createIntegratedUi(ctx, {
       position: 'inline',
       append: 'after',
-      anchor: 'div',
+      anchor: 'p',
       onMount: (container) => {
         const app = document.createElement('div');
         container.id = 'automount-anchor';
@@ -54,7 +54,7 @@ export default defineContentScript({
     const stopAutoMountButton = createIntegratedUi(ctx, {
       position: 'inline',
       append: 'last',
-      anchor: 'div',
+      anchor: 'p',
       onMount: (container) => {
         const app = document.createElement('button');
         container.classList.add('flex', 'flex-justify-center');
